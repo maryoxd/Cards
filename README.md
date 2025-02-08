@@ -17,22 +17,21 @@ Sledovanie výsledkov: Po každom kole sa zaznamená, ktorý hráč vyhral kolo.
 Štruktúra programu:
 
 Trieda Karta:
-
 Atribúty: Pismeno (string), Cislo (int).
 Metódy: Konštruktor, getPismeno(), getCislo().
-Trieda Hrac:
 
+Trieda Hrac:
 Atribúty: Meno (string), karty (vektor objektov Karta), vyhraneKola (int).
 Metódy: Konštruktor, pridajKartu(), dajKartu(), pridajKolo(), getVyhraneKola(), getMeno().
-Trieda Hra:
 
+Trieda Hra:
 Atribúty: hraci (vektor objektov Hrac), karty (vektor objektov Karta).
 Metódy:
 nacitajKartyAhracov(): Inicializuje hráčov a karty, premieša balíček a rozdá karty hráčom.
 porovnajKartyHracom(): Porovnáva dve karty a určuje, ktorá je vyššia podľa pravidiel.
 hrajHru(): Riadi priebeh hry cez jednotlivé kolá, určuje víťaza každého kola a aktualizuje skóre.
-Implementačné detaily:
 
+Implementačné detaily:
 Náhodné premiešanie: Používa sa funkcia random_shuffle na náhodné premiešanie balíčka kariet. Generátor náhodných čísel je inicializovaný s aktuálnym časom pomocou srand(time(0)).
 Rozdávanie kariet: Karty sú rozdelené medzi hráčov rovnomerne, každý dostane 8 kariet.
 Porovnávanie kariet: Implementované tak, že najprv sa porovnajú číselné hodnoty kariet. Ak sú rovnaké, porovná sa písmeno karty podľa lexikografického poradia.
@@ -53,7 +52,6 @@ Program description:
 The program simulates a simple card game between four players. The object of the game is to see which player wins the most rounds based on the value of the cards.
 
 Principle of the game:
-
 Deck of cards: The deck contains 32 cards that are a combination of letters ("A", "B") and numbers (1 to 8). Each card is a unique combination of letter and number.
 Dealing: The cards are shuffled randomly and dealt to the players so that each player receives 8 cards.
 Course of the game: The game consists of 8 rounds. Each round, each player reveals one card from their hand.
@@ -62,16 +60,16 @@ Track results: After each round, it is recorded which player won the round. At t
 Program structure:
 
 Class Card:
-
 Attributes: Letter (string), Number (int).
 Methods: Constructor, getLetter(), getNumber().
-Player Class:
 
+Player Class:
 Attributes: Name (string), cards (vector of Card objects), winRounds (int).
 Methods: Constructor, addCard(), giveCard(), addRound(), getWinRound(), getName().
-Game Class:
 
+Game Class:
 Attributes: players (vector of Player objects), cards (vector of Card objects).
+
 Methods:
 loadPlayerCards(): Initializes players and cards, shuffles the deck, and deals cards to players.
 compareKartyHracom(): Compares two cards and determines which one is higher according to the rules.
