@@ -25,5 +25,5 @@ This project was developed as part of the **Informatics 3 exam**, focusing on **
 2. **Compile and run the program:**
    ```bash
    g++ -o card_game main.cpp Card.cpp Player.cpp Game.cpp
-    ./card_game  
+   ./card_game  
 
